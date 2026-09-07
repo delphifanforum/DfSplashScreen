@@ -1,5 +1,7 @@
 # DFSplashScreen
 
+![Screen](screen.png)
+
 ![Screen1](image1.png)
 
 ![Screen1](image2.png)
