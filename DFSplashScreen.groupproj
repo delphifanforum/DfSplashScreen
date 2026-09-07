@@ -1,0 +1,34 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D4F8B167-2A0C-4E55-9C11-8B7E6A1D3C20}</ProjectGuid>
+        <ProjectVersion>18.2</ProjectVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Packages\DFSplashScreen.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\DFSplashScreenDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.7</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Build">
+        <MSBuild Projects="Packages\DFSplashScreen.dproj"/>
+        <MSBuild Projects="Demo\DFSplashScreenDemo.dproj"/>
+    </Target>
+    <Target Name="Clean">
+        <MSBuild Projects="Packages\DFSplashScreen.dproj" Targets="Clean"/>
+        <MSBuild Projects="Demo\DFSplashScreenDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Make">
+        <MSBuild Projects="Packages\DFSplashScreen.dproj" Targets="Make"/>
+        <MSBuild Projects="Demo\DFSplashScreenDemo.dproj" Targets="Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
