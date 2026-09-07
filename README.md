@@ -1,5 +1,9 @@
 # DFSplashScreen
 
+![Screen1](image1.png)
+
+![Screen1](image2.png)
+
 Professional VCL splash screen component for **Delphi 10.3 Rio and later**.
 
 - Website: [delphifan.com](https://delphifan.com)
